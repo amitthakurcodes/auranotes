@@ -20,7 +20,7 @@ class NotesController < ApplicationController
 
     respond_to do |format|
       if @note.save
-        format.html { redirect_to note_url(@note), notice: "Note was successfully created." }
+        format.html { redirect_to root_path, notice: "Note was successfully destroyed." }
         format.json { render :show, status: :created, location: @note }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -43,14 +43,16 @@ class NotesController < ApplicationController
   end
 
   # DELETE /notes/1 or /notes/1.json
-  def destroy
-    @note.destroy
+  
+   # DELETE /notes/1 or /notes/1.json
+def destroy
+  @note.destroy
 
-    respond_to do |format|
-      format.html { redirect_to notes_url, notice: "Note was successfully destroyed." }
-      format.json { head :no_content }
-    end
+  respond_to do |format|
+    format.html { redirect_to root_path, notice: "Note was successfully destroyed." }
+    format.json { head :no_content }
   end
+end
 
   private
     # Use callbacks to share common setup or constraints between actions.
