@@ -1,5 +1,7 @@
 # AuraNotes
 
+Live Link -:  https://auranotes.onrender.com
+
 AuraNotes is a modern note-taking web application built with Ruby on Rails. It allows users to securely create, organize, edit, and manage personal notes through a clean and responsive interface.
 
 ## Features
